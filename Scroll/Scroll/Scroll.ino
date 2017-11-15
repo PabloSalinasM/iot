@@ -26,7 +26,7 @@
 #include "rgb_lcd.h"
 
 rgb_lcd lcd;
-
+int analogValue=1;
 void setup() {
     // set up the LCD's number of columns and rows:
     lcd.begin(16, 2);
@@ -38,8 +38,12 @@ void setup() {
 
 void loop() {
    
-    Serial.write("1");
+    Serial.println(analogValue);
     // delay at the end of the full loop:
+    delay(1000);
+    lcd.clear();
+    String x = String(Serial.read());
+    lcd.print(x);
     delay(1000);
 
 }
