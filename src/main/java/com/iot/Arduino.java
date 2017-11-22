@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 public class Arduino extends AbstractSpringSerialPortConnector {
 
     public String hol = "0";
-    public void processData(String line){
-        
-        if(line == null){
-            System.out.println("Line es NULL");
+    public void processData(String arduinoOut){
+        System.out.println(arduinoOut);
+        if(arduinoOut == null){
+           //System.out.println("Line es NULL");
         }else{
-            System.out.println("Line NO es NULL");
-            if(line.equals("1")){
-                System.out.println("estamos aqui 1");
+            //System.out.println("Line NO es NULL");
+            if(arduinoOut.equals("1")){
+                //System.out.println("estamos aqui 1");
                 try {
                     int a = Integer.parseInt(hol);
                     a=a+1;
