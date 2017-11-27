@@ -45,8 +45,8 @@ void loop()
     delay(1000);
     lcd.clear();
     //String x = String(Serial.read());
-    byte[] bytes = Serial.read();
-    lcd.print( byteToStringDictionary(bytes[0]) );
+    byte myByte = Serial.read();
+    lcd.print( byteToStringDictionary(myByte) );
     delay(1000);
  }
 
@@ -90,7 +90,7 @@ void loop()
         traduction = " ";
         break;
       default:
-        traduction = "0"
+        traduction = "0";
     }
     return traduction;
   }
