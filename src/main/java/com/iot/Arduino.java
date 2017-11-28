@@ -29,7 +29,7 @@ public class Arduino extends AbstractSpringSerialPortConnector {
 
                     int a = Integer.parseInt("1");
                 try {
-                    sendMessage("T 012 00 24 00");
+                    sendMessage("T 123 45 67 89");
                     System.out.println("conchetumaree");
                 } catch (IOException e) {
                     e.printStackTrace();
