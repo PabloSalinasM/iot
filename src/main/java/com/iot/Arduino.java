@@ -24,12 +24,16 @@ public class Arduino extends AbstractSpringSerialPortConnector {
            //System.out.println("Line es NULL");
         }else{
             //System.out.println("Line NO es NULL");
-            if(arduinoOut.equals("1")){
-                //System.out.println("estamos aqui 1");
+
+            if(true){
+
+                System.out.println(arduinoOut);
 
                     int a = Integer.parseInt("1");
                 try {
-                    sendMessage("h");
+    
+                    sendMessage("T 123 45 67 89");
+
                     System.out.println("conchetumaree");
                 } catch (IOException e) {
                     e.printStackTrace();
