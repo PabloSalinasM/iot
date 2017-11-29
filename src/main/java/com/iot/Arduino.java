@@ -13,33 +13,25 @@ public class Arduino extends AbstractSpringSerialPortConnector {
     private String estadoAnterior = "";
     private String [] entradaProcesada;
     public void processData(String arduinoOut){
-        //arduinoOut = "100 00 20 00";
 
-        /*entradaProcesada = arduinoOut.split("\\s");
-        System.out.println(entradaProcesada[0]);
-        System.out.println(entradaProcesada[1]);
-        System.out.println(entradaProcesada[2]);
-        System.out.println(entradaProcesada[3]);*/
         if(arduinoOut.equals(this.estadoAnterior)){
-           //System.out.println("Line es NULL");
+
         }else{
-            //System.out.println("Line NO es NULL");
 
             if(true){
 
                 System.out.println(arduinoOut);
 
-                    int a = Integer.parseInt("1");
                 try {
 
-                    sendMessage("T 123 45 67 89");
+                    sendMessage("T 028 00 00 05");
 
-                    System.out.println("conchetumaree");
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
-                System.out.println("estamos aqui 2");
+
 
             }
             else{
